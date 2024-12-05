@@ -1,0 +1,37 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Global</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="login">
+    <h1>Connexion</h1>
+    <label for="username">Nom d'utilisateur :</label>
+    <input type="text" id="username" required>
+    <br>
+    <button onclick="login()">Se connecter</button>
+</div>
+
+<div id="chat" style="display:none;">
+    <h1>Chat Global</h1>
+    <p>Bienvenue, <span id="currentUser"></span> !</p>
+    
+    <div id="messages"></div>
+    
+    <textarea id="messageInput" placeholder="Tapez votre message..."></textarea>
+    <button onclick="sendMessage()">Envoyer</button>
+    
+    <button onclick="logout()">Déconnexion</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
